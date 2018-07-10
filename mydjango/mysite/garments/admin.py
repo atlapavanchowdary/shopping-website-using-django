@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-# Register your models here. admin atlapavanchowdary@gmail.com pavan123
+# Register your models here.
 from garments.models import FormalShirt
 
 class FormalShirtAdmin(admin.ModelAdmin): # FROM formal admin class we are deriving FormalShirtAdmin(this can be changed)
