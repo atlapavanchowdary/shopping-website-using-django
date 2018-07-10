@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h3> List of jean pants in our shop</h3>
+  <table width=100% border=1>
+  {% for l in lst %}
+  
+  <tr>
+  <td width=50%>
+  <h2>Name: {{l.name}} </h2><br>
+  <img src="{{l.photo.url}}" alt='jean photo' width=200 height=250>
+  </td>
+  <td width=50%>
+  <h3>Product details: </h3>
+  <h5>Price: {{l.price}}
+  Quantity:{{l.stock}}
+  Availability:{% if l.availability %} 
+		Yes 
+	       {% else %} 
+		No 
+	       {% endif %} 
+               <br>
+  
+  Created: {{l.created }}
+  Updated: {{l.updated }}
+  Description: {{l.desc }}
+  <br> </h5>
+  </td>
+  </tr>
+  {% endfor %}
+  
+
+</div>
+{% endblock %}
+
